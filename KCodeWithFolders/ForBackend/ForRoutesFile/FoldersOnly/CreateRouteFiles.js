@@ -9,7 +9,6 @@ let StartFunc = ({ inTablesCollection, inFrom, inTo }) => {
         return "children" in element
     });
 
-
     let LocalFileName = "routesTemplate.js";
     let LocalFrom = inFrom;
 
