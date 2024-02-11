@@ -1,34 +1,30 @@
 import { LowSync } from 'lowdb'
 import { JSONFileSync } from 'lowdb/node'
-import Configjson from '../../../Config.json' assert { type: 'json' };
-import fileNameJson from '../fileName.json' assert { type: 'json' };
+import Configjson from '../../../../Config.json' assert { type: 'json' };
 
-let StartFunc = ({ inDataToInsert }) => {
-    let LocalinDataToInsert = inDataToInsert;
+import { ColumnsPullFunc } from '../../DataColumns.js';
+
+let StartFunc = ({ LocalBodyAsModal }) => {
+    let LocalFromModal = ColumnsPullFunc()(LocalBodyAsModal);
+
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
 
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${Configjson.JsonPath}/${fileNameJson.fileName}`;
+    LocalReturnData.UserDataFilePath = `${Configjson.JsonPath}/{{ksSample}}.json`;
 
     const defaultData = { error: "From KLowDb" }
 
     const db = new LowSync(new JSONFileSync(LocalReturnData.UserDataFilePath), defaultData);
     db.read();
-    let LocalDataWithUuid = LocalFunc({ inDataToInsert: LocalinDataToInsert });
-
-    if (Array.isArray(db.data) === false) {
-        LocalReturnData.KReason = "Not array inside Json file...";
-
-        return LocalReturnData;
-    };
+    let LocalDataWithUuid = LocalFunc({ inDataToInsert: LocalFromModal });
 
     db.data.push(LocalDataWithUuid);
-    let LocalFromWrite = db.write();
+    db.write();
 
-    LocalReturnData.KTF = true;
+    // LocalReturnData.KTF = true;
 
-    return LocalDataWithUuid.UuId;
+    return LocalDataWithUuid.UuId;;
 };
 
 const LocalFunc = ({ inDataToInsert }) => {

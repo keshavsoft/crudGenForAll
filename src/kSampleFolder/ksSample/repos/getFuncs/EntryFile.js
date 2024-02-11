@@ -12,7 +12,7 @@ import {
     GetFuncById as GetFuncByIdForSequelize,GetRowCountFunc as GetRowCountFuncFromSequelize
 } from '../../dalsForSequelize/getFuncs/EntryFile.js';
 
-import configJson from '../../../Config.json' assert { type: 'json' };
+import configJson from '../../../../Config.json' assert { type: 'json' };
 
 let GetFunc = async () => {
     if (configJson.isSequelize) {
@@ -29,7 +29,6 @@ let GetDataOnlyFunc = async () => {
 
     return GetDataOnlyFuncDal();
 };
-
 let GetIdFunc = async ({ inId }) => {
     if (configJson.isSequelize) {
         return await GetFuncByIdForSequelize({ inId });

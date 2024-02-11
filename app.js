@@ -1,12 +1,13 @@
 import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
-import { router as routerbinByPath } from "./bin/routes.js";
+// import { router as routerbinByPath } from "./bin/routes.js";
 
 import { router as routerboilerPlate } from "./config/routes.js";
 
 import { router as routerFromSrc } from "./src/routes.js";
+import { router as routerFromRoutesWithFolder } from "./src/routesWithFolder.js";
 
-import { router as routerForLogin } from "./login/routes.js";
+// import { router as routerForLogin } from "./login/routes.js";
 
 import { router as routerForUtility } from "./Utility/routes.js";
 
@@ -50,10 +51,13 @@ app.get('/AboutUs', (req, res) => {
     res.end("KeshavSoft : 9848163021");
 });
 
-app.use('/bin', routerbinByPath);
+// app.use('/bin', routerbinByPath);
 app.use('/config', routerboilerPlate);
+
 app.use('/src', routerFromSrc);
-app.use('/login', routerForLogin);
+app.use('/srcWithFolder', routerFromRoutesWithFolder);
+
+// app.use('/login', routerForLogin);
 app.use('/utility', routerForUtility);
 
 StartFuncKWSServer(server);
