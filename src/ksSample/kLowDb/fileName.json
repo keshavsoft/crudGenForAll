@@ -1,3 +1,4 @@
 {
-    "fileName":"sample.json"
+    "DataDetailsKey": "srcDataDetails",
+    "fileName": "ksSample.json"
 }

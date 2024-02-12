@@ -1,7 +1,7 @@
 {
-    "JsonPath": "KData/JSON/416",
+    "JsonPath": "KData/JSON/316",
     "ToDataDetails": {
-        "DataPk": 416,
+        "DataPk": 316,
         "DataPath": "KData/JSON",
         "DbName": "data.db"
     },
@@ -29,18 +29,65 @@
                     }
                 }
             }
-        ]
-    },
-    "jsonConfig":{
+        ],
         "srcDataDetails": {
-            "DataPk": 416,
-            "DataPath": "KData/JSON",
-            "DbName": "data.db"
+            "DbName": "sample",
+            "tableAndColumns": [
+                {
+                    "tableName": "ksSample",
+                    "tableColumns": {
+                        "Name": {
+                            "type": "STRING",
+                            "allowNull": false,
+                            "unique": true
+                        },
+                        "Mobile": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "City": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                }
+            ]
         },
         "ToDataDetails": {
-            "DataPk": 416,
+            "DbName": "data",
+            "tableAndColumns": []
+        }
+    },
+    "jsonConfig": {
+        "srcDataDetails": {
+            "DataPk": 316,
+            "DataPath": "KData/JSON",
+            "DbName": "data.db",
+            "tableAndColumns": [
+                {
+                    "tableName": "ksSample",
+                    "tableColumns": {
+                        "Name": {
+                            "type": "STRING",
+                            "allowNull": false,
+                            "unique": true
+                        },
+                        "Mobile": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "City": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                }
+            ]
+        },
+        "ToDataDetails": {
+            "DataPk": 316,
             "DataPath": "KData/JSON",
             "DbName": "data.db"
-        }  
+        }
     }
 }
