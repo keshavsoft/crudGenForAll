@@ -9,7 +9,7 @@ let StartFunc = ({ inDataToInsert }) => {
 
     LocalReturnData.KTF = false;
 
-    LocalReturnData.UserDataFilePath = `${Configjson.JsonPath}/${fileNameJson.fileName}`;
+    LocalReturnData.UserDataFilePath = `${Configjson.jsonConfig.srcDataDetails.DataPath}/${Configjson.jsonConfig.srcDataDetails.DataPk}/${fileNameJson.folderName}/${fileNameJson.fileName}`;
 
     const defaultData = { error: "From KLowDb" }
 
