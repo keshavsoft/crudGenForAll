@@ -1,5 +1,5 @@
 ###Get for data from json file as array only
-GET http://localhost:7016/src/ksSample/BodyCheck
+GET http://localhost:7016/srcWithFolder/kSampleFolder/ksSample/BodyCheck
 
 ###Get for data from json file as array only
 GET http://localhost:7016/src/ksSample/RowCount
