@@ -5,7 +5,9 @@ import fileNameJson from "../fileName.json" assert { type: "json" };
 
 let StartFunc = async ({ inId }) => {
   let LocalId = inId;
-  let UserDataFilePath = `${Configjson.JsonPath}/${fileNameJson.fileName}`;
+  // let UserDataFilePath = `${Configjson.JsonPath}/${fileNameJson.fileName}`;
+  let UserDataFilePath = `${Configjson.jsonConfig.srcDataDetails.DataPath}/${Configjson.jsonConfig.srcDataDetails.DataPk}/${fileNameJson.folderName}/${fileNameJson.fileName}`;
+
   const defaultData = { error: "From KLowDb" };
 
   const db = new LowSync(new JSONFileSync(UserDataFilePath), defaultData);
