@@ -5,7 +5,7 @@ import configJson from "../../../../Config.json" assert { type: "json" };
 let PutFunc = async ({ inDataToUpdate, inId }) => {
   if (configJson.isSequelize) {
     return await PutFuncDalsForSequelize({ inDataToUpdate, inId });
-  }
+  };
 
   return PutFuncDal({ inBodyKeys: inModalObject });
 };
