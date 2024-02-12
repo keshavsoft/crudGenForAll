@@ -9,10 +9,10 @@ let StartFunc = ({ inTablesCollection, inFrom, inTo }) => {
         return "children" in element
     });
 
-    let LocalFileName = "routesTemplate.js";
+    let LocalFileName = "routes.js";
     let LocalFrom = inFrom;
 
-    let LocalFileData = fs.readFileSync(`${LocalFrom}/${LocalFileName}`);
+    let LocalFileData = fs.readFileSync(`${LocalFrom}/kSampleFolder/${LocalFileName}`);
     // let LocalFileDataParsed = JSON.parse(LocalFileData);
 
     LocalFirstLevelFolders.forEach(element => {

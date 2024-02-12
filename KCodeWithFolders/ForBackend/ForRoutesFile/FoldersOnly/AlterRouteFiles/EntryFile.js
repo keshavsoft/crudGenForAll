@@ -26,11 +26,6 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
         LocalFromForImports = StartFuncForImports({ inTablesCollection: LocalSecondLevelFiles, inFileData: LocalFileData.toString() });
         LocalFromForRouterUse = StartFuncForRouterUse({ inTablesCollection: LocalSecondLevelFiles, inFileData: LocalFromForImports });
 
-        // LocalSecondLevelFiles.forEach(LoopSecond => {
-        //     LocalFromForImports = StartFuncForImports({ inTablesCollection: LoopSecond, inFileData: LocalFileData.toString() });
-        //     LocalFromForRouterUse = StartFuncForRouterUse({ inTablesCollection: LoopSecond, inFileData: LocalFromForImports });
-        // });
-
         fs.writeFileSync(`${LocalTo}/${LoopFirst.name}/${LocalFileName}`, LocalFromForRouterUse);
     });
 };

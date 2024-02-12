@@ -10,7 +10,6 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
     });
 
     LocalFirstLevelFolders.forEach(element => {
-        // fs.mkdirSync(element.path.replace("FromTableColumns", ConfigJson.ToDataDetails.DataPath));
         fs.mkdirSync(`${LocalTo}/${element.name}`);
     });
 };

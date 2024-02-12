@@ -23,9 +23,7 @@ let StartFunc = ({ inTablesCollection, inTo, inFrom }) => {
             LoopInsideFolderName = LoopInsideFolderName.replace(LoopSecond.name, path.parse(LoopSecond.name).name);
 
             try {
-                // fs.mkdirSync(element.path.replace("FromTableColumns", ConfigJson.ToDataDetails.DataPath));
-
-                fs.cpSync(`${LocalFrom}/ksSample`, LoopInsideFolderName, {
+                fs.cpSync(`${LocalFrom}/kSampleFolder/ksSample`, LoopInsideFolderName, {
                     recursive: true,
                 });
             } catch (error) {

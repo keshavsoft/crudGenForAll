@@ -7,7 +7,7 @@ let StartFunc = ({ inTablesCollection, inFrom, inTo }) => {
     StartFuncCreateFolders({ inTablesCollection, inTo });
     StartFuncCreateRouteFiles({ inTablesCollection, inFrom, inTo });
     StartFuncAlterRouteFiles({ inTablesCollection, inFrom, inTo });
-    StartFuncCopyFolders({ inTablesCollection, inFrom, inTo })
+    StartFuncCopyFolders({ inTablesCollection, inFrom, inTo });
 };
 
 export { StartFunc };
