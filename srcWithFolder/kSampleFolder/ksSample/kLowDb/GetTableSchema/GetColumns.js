@@ -4,15 +4,25 @@ import fileNameJson from '../fileName.json' assert { type: 'json' };
 
 let StartFunc = () => {
     let LocalReturnData = { KTF: false, JSONFolderPath: "", CreatedLog: {} };
+    let LocalFolderName = fileNameJson.folderName;
+    let LocalFileName = fileNameJson.fileName;
 
     LocalReturnData.KTF = false;
-    let LocalTableColumns =Configjson.sequelizeConfig.srcDataDetails.tableAndColumns;
+    let LocalTableColumns = Configjson.jsonConfig.tableAndColumns;
 
-    let LocalFindColumns =LocalTableColumns.find(element => {
-        return element.tableName===path.parse(fileNameJson.fileName).name 
+    if ("children" in LocalTableColumns === false) {
+        return false;
+    };
+
+    let LocalFolderNeeded = LocalTableColumns.children.find(element => {
+        return element.name === LocalFolderName;
     });
 
-    return LocalFindColumns.tableColumns;
+    let LocalFindColumns = LocalFolderNeeded.find(element => {
+        return element.name === LocalFileName;
+    });
+
+    return LocalFindColumns.fileData;
 };
 
 export { StartFunc };
