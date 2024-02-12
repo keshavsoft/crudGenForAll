@@ -1,0 +1,46 @@
+{
+    "JsonPath": "KData/JSON/316",
+    "ToDataDetails": {
+        "DataPk": 316,
+        "DataPath": "KData/JSON",
+        "DbName": "data.db"
+    },
+    "DbName": "sample.db",
+    "isSequelize": false,
+    "sequelizeConfig": {
+        "isMysql": false,
+        "DbName": "sample",
+        "tableAndColumns": [
+            {
+                "tableName": "ksSample",
+                "tableColumns": {
+                    "Name": {
+                        "type": "STRING",
+                        "allowNull": false,
+                        "unique": true
+                    },
+                    "Mobile": {
+                        "type": "INTEGER",
+                        "allowNull": true
+                    },
+                    "City": {
+                        "type": "STRING",
+                        "allowNull": true
+                    }
+                }
+            }
+        ]
+    },
+    "jsonConfig":{
+        "srcDataDetails": {
+            "DataPk": 316,
+            "DataPath": "KData/JSON",
+            "DbName": "data.db"
+        },
+        "ToDataDetails": {
+            "DataPk": 316,
+            "DataPath": "KData/JSON",
+            "DbName": "data.db"
+        }  
+    }
+}

@@ -1,6 +1,7 @@
 node_modules/
 
 bin/
+binWithFolder/
 
 public/JsonUi
 public/JsonCRUD/Custom
