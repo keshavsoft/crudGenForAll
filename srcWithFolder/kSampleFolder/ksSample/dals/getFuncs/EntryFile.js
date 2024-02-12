@@ -1,6 +1,7 @@
 import { StartFunc as StartFuncreadFile } from '../../kLowDb/ReadFileList/readFile.js';
 import { StartFunc as StartFuncReadFileFromModal } from '../../kLowDb/ReadFileList/readFileFromModal.js';
 import { StartFunc as StartFunReadFileById } from '../../kLowDb/ReadFileList/readFileById.js';
+import { StartFunc as StartFuncGetTableSchema } from '../../kLowDb/GetTableSchema/GetColumns.js';
 
 let GetFunc = () => {
     return StartFuncreadFile();
@@ -39,7 +40,7 @@ let GetFromModalUuidAndTSFunc = () => {
 };
 
 let GetBodyCheckFunc = () => {
-    return StartFuncreadFile();
+    return StartFuncGetTableSchema();
 };
 
 export {
