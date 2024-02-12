@@ -2,6 +2,8 @@ import { StartFunc as StartFuncPortListen } from "./PortListen.js";
 
 // import { router as routerbinByPath } from "./bin/routes.js";
 
+import { router as routerbinWithFolder } from "./binWithFolder/routes.js";
+
 import { router as routerboilerPlate } from "./config/routes.js";
 
 import { router as routerFromSrc } from "./src/routes.js";
@@ -52,6 +54,7 @@ app.get('/AboutUs', (req, res) => {
 });
 
 // app.use('/bin', routerbinByPath);
+app.use('/binWithFolder', routerbinWithFolder);
 app.use('/config', routerboilerPlate);
 
 app.use('/src', routerFromSrc);

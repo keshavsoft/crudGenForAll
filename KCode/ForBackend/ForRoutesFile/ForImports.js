@@ -3,7 +3,7 @@ let StartFunc = ({ inEndPointsArray, inFileData }) => {
 
     let LocalFileData = inFileData;
 
-    let LocalToSearch = "import { router as routerFromksSample } from './kSampleFolder/routes.js';"
+    let LocalToSearch = "import { router as routerFromkSampleFolder } from './kSampleFolder/routes.js';"
     let FromLocalForEndPoints = LocalForEndPoints({ inEndPointsArray: LocalEndPointsArray, inToSearch: LocalToSearch });
     let LocalNewData = LocalFileData.replaceAll(LocalToSearch, FromLocalForEndPoints);
 

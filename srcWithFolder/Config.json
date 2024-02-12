@@ -29,9 +29,36 @@
                     }
                 }
             }
-        ]
+        ],
+        "srcDataDetails": {
+            "DbName": "sample",
+            "tableAndColumns": [
+                {
+                    "tableName": "ksSample",
+                    "tableColumns": {
+                        "Name": {
+                            "type": "STRING",
+                            "allowNull": false,
+                            "unique": true
+                        },
+                        "Mobile": {
+                            "type": "INTEGER",
+                            "allowNull": true
+                        },
+                        "City": {
+                            "type": "STRING",
+                            "allowNull": true
+                        }
+                    }
+                }
+            ]
+        },
+        "ToDataDetails": {
+            "DbName": "data",
+            "tableAndColumns": []
+        }
     },
-    "jsonConfig":{
+    "jsonConfig": {
         "srcDataDetails": {
             "DataPk": 316,
             "DataPath": "KData/JSON",
@@ -41,6 +68,6 @@
             "DataPk": 316,
             "DataPath": "KData/JSON",
             "DbName": "data.db"
-        }  
+        }
     }
 }

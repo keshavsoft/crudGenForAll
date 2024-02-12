@@ -1,5 +1,0 @@
-GET http://localhost:7016/config/dataSource
-
-
-###
-GET http://localhost:7016/config/files
