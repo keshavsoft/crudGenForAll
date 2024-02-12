@@ -31,7 +31,7 @@ let GetFromModalUuidAndTSFunc = () => {
 };
 
 let GetBodyCheckFunc = async () => {
-    return GetFuncDal();
+    return GetBodyCheckFuncDal();
 };
 
 let GetRowCountFunc = async () => {

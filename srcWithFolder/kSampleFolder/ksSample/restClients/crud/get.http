@@ -1,5 +1,5 @@
 ###Get for data from json file as array only
-GET http://localhost:7016/src/ksSample/BodyCheck
+GET http://localhost:7016/srcWithFolder/kSampleFolder/ksSample/BodyCheck
 
 ###Get for data from json file as array only
 GET http://localhost:7016/src/ksSample/RowCount
@@ -8,7 +8,7 @@ GET http://localhost:7016/src/ksSample/RowCount
 GET http://localhost:7016/srcWithFolder/kSampleFolder/ksSample/DataOnly
 
 ###Get for as is data
-GET http://localhost:7016/src/ksSample
+GET http://localhost:7016/srcWithFolder/kSampleFolder/ksSample
 
 ###Get for data transformed to Modal data
 GET http://localhost:7016/src/ksSample/FromModal
