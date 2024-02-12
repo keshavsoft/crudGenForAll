@@ -9,7 +9,7 @@ let StartFunc = ({ inTablesCollection }) => {
     };
 
     StartFuncFirstLevelEntryFile({ inTablesCollection: LocalTablesCollection });
-    StartFuncSecondLevelEntryFile({ inTablesCollection: LocalTablesCollection });
+    // StartFuncSecondLevelEntryFile({ inTablesCollection: LocalTablesCollection });
 };
 
 export { StartFunc };

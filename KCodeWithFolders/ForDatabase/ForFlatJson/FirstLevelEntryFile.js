@@ -3,7 +3,7 @@ import { StartFunc as StartFuncFilesOnly } from "./FirstLevel/FilesOnly.js";
 
 let StartFunc = ({ inTablesCollection }) => {
     StartFuncFoldersOnly({ inTablesCollection });
-    StartFuncFilesOnly({ inTablesCollection })
+    // StartFuncFilesOnly({ inTablesCollection })
 };
 
 export { StartFunc };
