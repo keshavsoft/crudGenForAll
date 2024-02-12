@@ -20,6 +20,23 @@ let StartFunc = ({ inTablesCollection, inTo }) => {
             inFolderName: LoopFirst.name, inFilesCollection: LocalSecondLevelFiles,
             inTo: LocalTo, inTypeName: LocalTypeName, inFileName: "get.http"
         });
+        StartFuncCommonFuncs({
+            inFolderName: LoopFirst.name, inFilesCollection: LocalSecondLevelFiles,
+            inTo: LocalTo, inTypeName: LocalTypeName, inFileName: "post.http"
+        });
+        StartFuncCommonFuncs({
+            inFolderName: LoopFirst.name, inFilesCollection: LocalSecondLevelFiles,
+            inTo: LocalTo, inTypeName: LocalTypeName, inFileName: "delete.http"
+        });
+        StartFuncCommonFuncs({
+            inFolderName: LoopFirst.name, inFilesCollection: LocalSecondLevelFiles,
+            inTo: LocalTo, inTypeName: LocalTypeName, inFileName: "image.http"
+        });
+        StartFuncCommonFuncs({
+            inFolderName: LoopFirst.name, inFilesCollection: LocalSecondLevelFiles,
+            inTo: LocalTo, inTypeName: LocalTypeName, inFileName: "put.http"
+        });
+
     });
 
     // StartFuncCommonFuncs({ inElement: LocalElement, inTo: LocalTo, inTypeName: LocalTypeName, inFileName: "get.http" });

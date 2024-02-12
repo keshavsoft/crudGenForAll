@@ -10,16 +10,17 @@ let StartFunc = ({ inFilesCollection, inFolderName, inTo, inTypeName, inFileName
     let LocalFilesCollection = inFilesCollection;
 
     LocalFilesCollection.forEach(LoopFile => {
-        console.log("LoopFile : ", LoopFile, inFolderName);
+        
         let LoopInsideFileName = path.parse(LoopFile.name).name;
         let LocalFilePath = `${LocalTo}/${inFolderName}/${LoopInsideFileName}/${LocalTypeName}/${LocalFileName}`;
-
+        
         let LocalFileData = fs.readFileSync(LocalFilePath);
+
         let LocalFileDataReplaced = LocalFileData.toString().replaceAll("ksSample", LoopInsideFileName);
         let LocalBinReplaced = LocalFileDataReplaced.replaceAll("/srcWithFolder", "/binWithFolder");
+        let LocalkSampleFolderReplaced = LocalBinReplaced.replaceAll("kSampleFolder", inFolderName);
 
-        fs.writeFileSync(LocalFilePath, LocalBinReplaced);
-
+        fs.writeFileSync(LocalFilePath, LocalkSampleFolderReplaced);
     });
 };
 
