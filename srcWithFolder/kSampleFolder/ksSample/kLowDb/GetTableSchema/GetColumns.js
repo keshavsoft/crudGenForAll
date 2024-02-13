@@ -18,7 +18,7 @@ let StartFunc = () => {
         return element.name === LocalFolderName;
     });
 
-    let LocalFindColumns = LocalFolderNeeded.find(element => {
+    let LocalFindColumns = LocalFolderNeeded.children.find(element => {
         return element.name === LocalFileName;
     });
 

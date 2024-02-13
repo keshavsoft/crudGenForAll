@@ -14,7 +14,7 @@ let StartFunc = ({ inTablesCollection }) => {
         });
 
         LocalSecondLevelFiles.forEach(LoopSecondLevel => {
-            fs.writeFileSync(LoopSecondLevel.path.replace("FromTableColumns", ConfigJson.ToDataDetails.DataPath), JSON.stringify({}));
+            fs.writeFileSync(LoopSecondLevel.path.replace("FromTableColumns", ConfigJson.ToDataDetails.DataPath), JSON.stringify([]));
         });
     });
 };
