@@ -4,12 +4,15 @@
       "allowNull": false,
       "unique": true
     },
-    "CustomerMobile": {
-      "type": "NUMBER",
-      "unique": true,
-      "allowNull": false
+    "Mobile": {
+      "type": "STRING",
+      "allowNull": true
     },
-    "FlatDetails": {
+    "City": {
+      "type": "STRING",
+      "allowNull": true
+    },
+    "Pcs": {
       "type": "STRING",
       "allowNull": true
     }
